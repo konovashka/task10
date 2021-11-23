@@ -13,7 +13,7 @@ int main()
 		scanf_s("%d", &x);
 		if (x!=0)
 		{
-			if (((x<0)&&(prev>0))||((x>0)&&(prev<0)))
+			if (x*prev<0)
 			{
 				fl = 1;
 				prev = x;
