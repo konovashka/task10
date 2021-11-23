@@ -4,31 +4,27 @@
 
 int main()
 {
-    int n,x,prev,fl;
+    int n,x,prev;
+	bool fl=true;
 	fl = 1;
 	scanf_s("%d", &n);
 	scanf_s("%d", &prev);
-	for (int i = 0; ((i < n-1)&&(fl==1)); i++)
+	for (int i = 0; (i < n-1) && fl; i++)
 	{
 		scanf_s("%d", &x);
 		if (x!=0)
 		{
-			if (x*prev<0)
+			if (x*prev>0)
 			{
-				fl = 1;
-				prev = x;
+				fl = folse;
+				break;
 			}
-			else
-			{
-				fl = 0;
-			}
-		}
-		else
-		{
-			i -= 1;
+			
+			prev = x;		
+			
 		}
 	}
-	if (fl==1)
+	if (fl)
 	{
 		printf("yavlyaetsya");
 	}
